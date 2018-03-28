@@ -1,0 +1,86 @@
+﻿@model CarsRentEF.Models.Report
+
+@{
+    ViewBag.Title = "Report Edit";
+}
+
+<div class="well well-sm"><h1>Редактировать статистический отчет</h1></div>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ReportId)
+        @Html.HiddenFor(model => model.Timestamp)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ShortName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ShortName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ShortName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateOfFormation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateOfFormation, new { htmlAttributes = new { @class = "form-control datepicker", id = "dateofformation" } })
+                @Html.ValidationMessageFor(model => model.DateOfFormation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control datepicker", id = "startdate" } })
+                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control datepicker", id = "enddate" } })
+                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-save"></span>&nbsp;Сохранить
+                </button>
+                &nbsp;&nbsp;
+                <a href="@Url.Action("Index")" class="btn btn-default">
+                    <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+                </a>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/chosen.jquery.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.datepicker').datepicker({ dateFormat: "dd/mm/yy" });
+        });
+
+        $.validator.methods.date = function (value, element) { // Валидация даты
+            if (!value)
+                return false;
+
+            var splitVal = value.split(' ');
+            var date = splitVal[0].split('/');
+            var time = (splitVal.length == 2 ? splitVal[1] : '0:0:0').split(':');
+            return this.optional(element) || !/Invalid|NaN/.test(new Date(date[2], date[1], date[0], time[0], time[1], time[2], 0));
+        };
+
+    </script>
+}

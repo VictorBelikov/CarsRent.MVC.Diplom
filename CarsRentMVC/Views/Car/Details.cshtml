@@ -1,0 +1,140 @@
+﻿@model CarsRentEF.Models.Car
+
+@{
+    ViewBag.Title = "Car Details";
+}
+
+<div class="well well-sm"><h1>Полные данные по автомобилю</h1></div>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            ID Авто
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.АвтоID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Госномер)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Госномер)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Марка)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Марка)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Модель)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Модель)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ГодВыпуска)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ГодВыпуска)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ТипКузова)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ТипКузова)
+        </dd>
+
+        <dt>Двигатель</dt>
+        <dd>
+            @Html.DisplayFor(model => model.ТипДвигателя),
+            @Html.DisplayFor(model => model.ОбъемДвигателя) л.,
+            @Html.DisplayFor(model => model.Мощность) л.с.
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Цвет)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Цвет)
+        </dd>
+
+        <dt>
+            Полная стоимость
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Стоимость)<span> $</span>
+        </dd>
+
+        <dt>
+            Аренда в сутки
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.СтоимостПрокатаВСут)<span> $</span>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Статус)
+        </dt>
+
+        @if (Model.Статус.ToLower() == "арендован") {
+            <dd style="color: red; font-weight: bold">@Html.DisplayFor(model => model.Статус)</dd>
+
+        } else {
+            <dd style="color: green">@Html.DisplayFor(model => model.Статус)</dd>
+        }
+    </dl>
+
+    @if (Model.Image == null) {
+        <p></p>
+    } else {
+        <img width="600" src="@Url.Action("GetImage", "Car", new {Model.АвтоID})" class="img-thumbnail" />
+    }
+    <br /><br /><br /><br />
+</div>
+
+<p>
+    <a href="@Url.Action("Edit", new {id = Model.АвтоID})" class="btn btn-warning">
+        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Delete", new {id = Model.АвтоID})" class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Index", new {id = Model.АвтоID})" class="btn btn-default">
+        <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+    </a>
+</p>
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

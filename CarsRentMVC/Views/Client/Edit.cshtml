@@ -1,0 +1,142 @@
+﻿@model CarsRentEF.Models.Client
+
+@{
+    ViewBag.Title = "Client Edit";
+}
+
+<div class="well well-sm"><h1>Редактировать данные клиента</h1></div>
+
+
+@using (Html.BeginForm("Edit", "Client", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.КлиентID)
+        @Html.HiddenFor(model => model.Timestamp)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ФИО, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ФИО, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ФИО, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Адрес, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Адрес, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Адрес, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Телефон, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Телефон, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Телефон, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.НомерПаспорта, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.НомерПаспорта, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.НомерПаспорта, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.НомерВодУд, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.НомерВодУд, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.НомерВодУд, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ЧерныйСписок, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ЧерныйСписок, new { htmlAttributes = new { @class = "form-control", type = "hidden" } })
+                @Html.DropDownList("BlackList", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ЧерныйСписок, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Выберите файл", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn btn-primary">
+                            Обзор&hellip; <input name="imageUpload" type="file" style="display: none;" multiple>
+                        </span>
+                    </label>
+                    <input type="text" class="form-control" readonly style="width: 200px">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10 col-md-offset-2">
+                @if (Model.Image == null) {
+                    <p>Нет изображения</p>
+                } else {
+                    <img width="200" src="@Url.Action("GetImage", "Client", new {Model.КлиентID})" class="img-thumbnail" />
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-save"></span>&nbsp;Сохранить
+                </button>
+                &nbsp;&nbsp;
+                <a href="@Url.Action("Index")" class="btn btn-default">
+                    <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+                </a>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $(document).on('change', ':file', function() {
+            var input = $(this),
+                numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.trigger('fileselect', [numFiles, label]);
+        });
+
+        $(document).ready( function() {
+            $(':file').on('fileselect', function(event, numFiles, label) {
+
+                var input = $(this).parents('.input-group').find(':text'),
+                    log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+                if( input.length ) {
+                    input.val(log);
+                } else {
+                    if( log ) alert(log);
+                }
+
+            });
+        });
+
+        // переопределение валидации на стороне клиента
+        $.validator.methods.range = function (value, element, param) {
+            var globalizedValue = value.replace(",", ".");
+            return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+        }
+
+        $.validator.methods.number = function (value, element) {
+            return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+        }
+    </script>
+}

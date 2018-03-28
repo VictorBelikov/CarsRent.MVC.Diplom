@@ -1,0 +1,152 @@
+﻿@using CarsRentMVC.Infrastructure
+@model CarsRentMVC.Models.ViewModels.CarListViewModel
+
+@{
+    ViewBag.Title = "Car Index";
+}
+
+<div class="well well-sm"><h1>Доступные автомобили</h1></div>
+
+@using (Html.BeginForm()) {
+    @Html.DropDownList("CarBodies", null, htmlAttributes: new { @class = "form-control pull-right", id = "carbodies" })
+    <input class="form-control myFindInput" type="text" name="filter" placeholder="Поиск..." id="carsearchfield" />
+    <span>
+        <button class="btn btn-primary" type="submit" id="carsearchbutton">Найти</button>
+    </span>
+    <br />
+    <br />
+    <br />
+    <p>
+        <a href="@Url.Action("Create")" class="btn btn-success">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp;Добавить автомобиль
+        </a>
+    </p>
+    <br />
+    <table class="table table-responsive table-hover table-bordered table-striped">
+
+        <tr>
+            <th>
+                Госномер
+            </th>
+            <th>
+                Марка
+            </th>
+            <th>
+                Модель
+            </th>
+            <th>
+                Год
+            </th>
+            <th>
+                Кузов
+            </th>
+            <th>
+                Двигатель
+            </th>
+            <th>
+                Цвет
+            </th>
+            <th>
+                Стоимость
+            </th>
+            <th>
+                Аренда/сут.
+            </th>
+            <th>
+                Статус
+            </th>
+            <th>Фото</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Cars) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Госномер)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Марка)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Модель)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ГодВыпуска)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ТипКузова)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ТипДвигателя)<br>
+                    @Html.DisplayFor(modelItem => item.ОбъемДвигателя) л.<br />
+                    @Html.DisplayFor(modelItem => item.Мощность) л.с.
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Цвет)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Стоимость)<span> $</span>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.СтоимостПрокатаВСут)<span> $</span>
+                </td>
+
+                @if (item.Статус.ToLower() == "арендован") {
+                    <td style="color: red; font-weight: bold">@Html.DisplayFor(modelItem => item.Статус)</td>
+
+                } else {
+                    <td style="color: green">@Html.DisplayFor(modelItem => item.Статус)</td>
+                }
+
+                @if (item.Image != null) {
+                    <td>
+                        <img width="150" src="@Url.Action("GetImage", "Car", new {item.АвтоID})" alt="NoImage" class="img-thumbnail" />
+                    </td>
+                } else {
+                    <td></td>
+                }
+
+
+                <td style="padding-right: 6px">
+                    <a href="@Url.Action("Edit", new {id = item.АвтоID})">
+                        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать<br>
+                    </a>
+                    <a href="@Url.Action("Details", new {id = item.АвтоID})">
+                        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;Подробно<br>
+                    </a>
+                    <a href="@Url.Action("Delete", new {id = item.АвтоID})">
+                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <div>
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/chosen.jquery.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var selectedValue;
+
+            $('#carbodies').change(function () {
+                selectedValue = $(this).val();
+                $('#carsearchfield').css("color", "white");
+                $('#carsearchfield').val(selectedValue);
+                $('#carsearchbutton').click();
+            });
+        });
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

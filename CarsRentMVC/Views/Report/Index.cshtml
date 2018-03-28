@@ -1,0 +1,91 @@
+﻿@using CarsRentMVC.Infrastructure
+@model CarsRentMVC.Models.ViewModels.ReportListViewModel
+
+@{
+    ViewBag.Title = "Report Index";
+}
+
+<div class="well well-sm"><h1>Список сформированных статистических отчетов</h1></div>
+
+@using (Html.BeginForm()) {
+    <input class="form-control myFindInput" type="text" name="filter" placeholder="Поиск..." />
+    <span>
+        <button class="btn btn-primary" type="submit">Найти</button>
+    </span>
+    <br />
+    <br />
+    <br />
+    <p>
+        <a href="@Url.Action("Create")" class="btn btn-success">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp;Создать отчет
+        </a>
+    </p>
+    <br/>
+    <table class="table table-responsive table-hover table-bordered table-striped">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Наименование Отчета
+            </th>
+            <th>
+                Дата<br />формирования
+            </th>
+            <th>
+                Начало<br />периода
+            </th>
+            <th>
+                Конец<br />периода
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Reports) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReportId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfFormation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new {id = item.ReportId})">
+                        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="@Url.Action("Details", new {id = item.ReportId})">
+                        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;Подробно
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="@Url.Action("Delete", new {id = item.ReportId})">
+                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <div>
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+    </div>
+}
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

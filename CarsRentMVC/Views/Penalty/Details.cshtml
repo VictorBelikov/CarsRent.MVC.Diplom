@@ -1,0 +1,42 @@
+﻿@model CarsRentEF.Models.Penalty
+
+@{
+    ViewBag.Title = "Penalty Details";
+}
+
+<div class="well well-sm"><h1>Данные по штрафу</h1></div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.НаименованиеШтрафа)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.НаименованиеШтрафа)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.СуммаШтрафа)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.СуммаШтрафа)<span> $</span>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Edit", new {id = Model.ШтрафID})" class="btn btn-warning">
+        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Delete", new {id = Model.ШтрафID})" class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Index", new {id = Model.ШтрафID})" class="btn btn-default">
+        <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+    </a>
+</p>

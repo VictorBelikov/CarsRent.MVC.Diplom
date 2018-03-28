@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <div class="myWrapGreen">
+        <div class="col-md-4">
+            <div class="person myPerOne">
+                Автомобили
+                <span class="mytooltip">
+                    Просмотреть/Редактировать список доступных автомобилей.
+                </span>
+            </div>
+            <a class="myLinkButton myLinkButtonColorGreen myIncrease myButOne" href="@Url.Action("Index", "Car")">
+                <span class="myIntoLink">Cars</span>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <div class="person myPerTwo">
+                Доп.оборудование
+                <span class="mytooltip">
+                    Просмотреть/Редактировать список доступного дополнительного оборудования.
+                </span>
+            </div>
+            <a class="myLinkButton myLinkButtonColorGreen myIncrease myButTwo" href="@Url.Action("Index", "Option")">
+                <span class="myIntoLink">Options</span>
+            </a>
+        </div>
+
+        <div style="clear: both"></div>
+    </div>
+    
+    <div class="myWrapGreen">
+        <div class="col-md-4">
+            <div class="person myPerOne">
+                Скидки
+                <span class="mytooltip">
+                    Просмотреть/Редактировать список доступных скидок.
+                </span>
+            </div>
+            <a class="myLinkButton myLinkButtonColorWhite myIncrease myButOne" href="@Url.Action("Index", "Discount")">
+                <span class="myIntoLink">Discounts</span>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <div class="person myPerTwo">
+                Штрафы
+                <span class="mytooltip">
+                    Просмотреть/Редактировать список доступных штрафов.
+                </span>
+            </div>
+            <a class="myLinkButton myLinkButtonColorWhite myIncrease myButTwo" href="@Url.Action("Index", "Penalty")">
+                <span class="myIntoLink">Penalties</span>
+            </a>
+        </div>
+
+        <div style="clear: both"></div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@model CarsRentEF.Models.Option
+
+@{
+    ViewBag.Title = "Option Details";
+}
+
+<div class="well well-sm"><h1>Данные по дополнительному оборудованию</h1></div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            ID Опции
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OptionId)
+        </dd>
+
+        <dt>
+            Наименование Опции
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Инвентарный Номер
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvNumber)
+        </dd>
+
+        <dt>
+            Полная стоимость
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullCost)<span> $</span>
+        </dd>
+
+        <dt>
+            Стоимтость аренды в сут.
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentDayCost)<span> $</span>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Edit", new {id = Model.OptionId})" class="btn btn-warning">
+        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Delete", new {id = Model.OptionId})" class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Index", new {id = Model.OptionId})" class="btn btn-default">
+        <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+    </a>
+</p>

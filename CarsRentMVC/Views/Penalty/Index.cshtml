@@ -1,0 +1,82 @@
+﻿@using CarsRentMVC.Infrastructure
+@model CarsRentMVC.Models.ViewModels.PenaltyListViewModel
+
+@{
+    ViewBag.Title = "Penalty Index";
+}
+
+<div class="well well-sm"><h1>Список возможных штрафов</h1></div>
+
+@using (Html.BeginForm()) {
+    <input class="form-control myFindInput" type="text" name="filter" placeholder="Поиск..." />
+    <span>
+        <button class="btn btn-primary" type="submit">Найти</button>
+    </span>
+    <br />
+    <br />
+    <p>
+        <a href="@Url.Action("Create")" class="btn btn-success">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp;Добавить штраф
+        </a>
+    </p>
+    <br/>
+    <table class="table table-responsive table-hover table-bordered table-striped">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Наименование Штрафа
+            </th>
+            <th>
+                Сумма Штрафа
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Penalties) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ШтрафID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.НаименованиеШтрафа)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.СуммаШтрафа)<span> $</span>
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new {id = item.ШтрафID})">
+                        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="@Url.Action("Details", new {id = item.ШтрафID})">
+                        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;Подробно
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="@Url.Action("Delete", new {id = item.ШтрафID})">
+                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div>
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/chosen.jquery.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

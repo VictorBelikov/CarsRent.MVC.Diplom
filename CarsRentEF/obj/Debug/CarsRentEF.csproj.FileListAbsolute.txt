@@ -1,0 +1,51 @@
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\CarsRentEF.dll.config
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\CarsRentEF.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\CarsRentEF.pdb
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\EntityFramework.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\EntityFramework.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\obj\Debug\CarsRentEF.csprojResolveAssemblyReference.cache
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\obj\Debug\CarsRentEF.csproj.CoreCompileInputs.cache
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\obj\Debug\CarsRentEF.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\obj\Debug\CarsRentEF.pdb
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\obj\Debug\CarsRentEF.Migrations.InitialCreate.resources
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\obj\Debug\CarsRentEF.csproj.GenerateResource.Cache
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\obj\Debug\CarsRentEF.Migrations.TimeStamps.resources
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\ADO_EntityFramework\CarsRentEF\obj\Debug\CarsRentEF.Migrations.DropTwoIndex.resources
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\CarsRentEF.dll.config
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\CarsRentEF.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\CarsRentEF.pdb
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\EntityFramework.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\EntityFramework.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.csprojResolveAssemblyReference.cache
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.Migrations.InitialCreate.resources
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.Migrations.TimeStamps.resources
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.Migrations.DropTwoIndex.resources
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.csproj.GenerateResource.Cache
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.csproj.CoreCompileInputs.cache
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.pdb
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.Migrations.ToDouble.resources
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.Migrations.Update1.resources
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\CarsRentEF.dll.config
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\CarsRentEF.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\CarsRentEF.pdb
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\EntityFramework.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\EntityFramework.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.csprojResolveAssemblyReference.cache
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.csproj.CoreCompileInputs.cache
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.pdb
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.Migrations.Create.resources
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentEF\obj\Debug\CarsRentEF.csproj.GenerateResource.Cache

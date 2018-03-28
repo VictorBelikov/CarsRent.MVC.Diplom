@@ -1,0 +1,114 @@
+﻿@using CarsRentMVC.Infrastructure
+@model CarsRentMVC.Models.ViewModels.ClientListViewModel
+
+@{
+    ViewBag.Title = "Client Index";
+}
+
+<div class="well well-sm"><h1>Список клиентов</h1></div>
+
+@using (Html.BeginForm()) {
+    <input class="form-control myFindInput" type="text" name="filter" placeholder="Поиск.." />
+    <span>
+        <button class="btn btn-primary" type="submit">Найти</button>
+    </span>
+    <br />
+    <br />
+    <p>
+        <a href="@Url.Action("Create")" class="btn btn-success">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp;Добавить клиента
+        </a>
+    </p>
+    <br/>
+    <table class="table table-responsive table-hover table-bordered table-striped">
+        <tr>
+            <th>ID</th>
+            <th>
+                ФИО
+            </th>
+            <th>
+                Адрес
+            </th>
+            <th>
+                Телефон
+            </th>
+            <th>
+                № Паспорта
+            </th>
+            <th>
+                № Водительск.<br />Удостоверения
+            </th>
+            <th>
+                Черный<br />список
+            </th>
+            <th>Фото</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Clients) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.КлиентID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ФИО)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Адрес)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Телефон)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.НомерПаспорта)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.НомерВодУд)
+                </td>
+
+                @if (item.ЧерныйСписок.ToLower() == "да") {
+                    <td style="color: red; font-weight: bold">@Html.DisplayFor(modelItem => item.ЧерныйСписок)</td>
+                } else {
+                    <td style="color: green">@Html.DisplayFor(modelItem => item.ЧерныйСписок)</td>
+                }
+
+                @if (item.Image != null) {
+                    <td>
+                        <img width="80" src="@Url.Action("GetImage", "Client", new {item.КлиентID})" alt="NoImage" class="img-thumbnail" />
+                    </td>
+                } else {
+                    <td></td>
+                }
+
+                <td>
+                    <a href="@Url.Action("Edit", new {id = item.КлиентID})">
+                        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+                    </a><br/>
+                    <a href="@Url.Action("Details", new {id = item.КлиентID})">
+                        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;Подробно
+                    </a><br/>
+                    <a href="@Url.Action("Delete", new {id = item.КлиентID})">
+                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <div>
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/chosen.jquery.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

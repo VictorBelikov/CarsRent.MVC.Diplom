@@ -1,0 +1,146 @@
+﻿@using CarsRentMVC.Infrastructure
+@model CarsRentMVC.Models.ViewModels.RentListViewModel
+
+@{
+    ViewBag.Title = "Rent Index";
+}
+
+<div class="well well-sm"><h1>Договора Аренды</h1></div>
+
+
+@using (Html.BeginForm("Index", "Rent")) {
+    <div class="row">
+        <div class="col-xs-6">
+            <input id="failedrentssearchfield" class="form-control myFindInput" type="text" name="filter" placeholder="Поиск..." value="" />
+            <span>
+                <button class="btn btn-primary" type="submit">Найти</button>
+            </span>
+            <br />
+            <br />
+            <br />
+            <p>
+                <a href="@Url.Action("Create")" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>&nbsp;Создать новый договор
+                </a>
+            </p>
+        </div>
+        <div class="col-xs-6">
+            <div style="border: 1px solid gainsboro; border-radius: 5px; padding: 25px 25px; background: ghostwhite">
+                <span style="font-size: 20pt">Просроченные договора аренды: </span>
+                @if (ViewBag.RentFailed == 0) {
+                    <span style="color: green; font-weight: bold; font-size: 20pt">@ViewBag.RentFailed</span>
+                } else {
+                    <span style="color: red; font-weight: bold; font-size: 20pt">@ViewBag.RentFailed</span>
+                }
+                <br />
+                <button id="gotofailedrents" class="btn btn-primary " style="width: 200px">Перейти...</button>
+            </div>
+        </div>
+
+
+        <br />
+        <br />
+
+    </div>
+
+
+    <input type="hidden" id="failedrentsquantity" value="@ViewBag.RentFailed" />
+    <br />
+    <br />
+
+    <table class="table table-responsive table-hover table-bordered table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Госномер<br />авто</th>
+            <th>Авто</th>
+            <th>ФИО</th>
+            <th>Номер<br />Паспорта</th>
+            <th>Адрес,<br />Телефон</th>
+            <th>Дата<br />Выдачи</th>
+            <th>Дата<br />Возврата</th>
+            <th>Сумма</th>
+            <th>Состояние</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Rents) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.АрендаID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Car.Госномер)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Car.Марка)<br />
+                    @Html.DisplayFor(modelItem => item.Car.Модель)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.ФИО)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.НомерПаспорта)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.Адрес)<br />тел.
+                    @Html.DisplayFor(modelItem => item.Client.Телефон)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ДатаВыдачи)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ДатаВозврата)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ИтоговаяСумма)&nbsp;<span>$</span>
+                </td>
+
+                @if (item.Состояние.ToLower() == "закрыт") {
+                    <td style="color: green">@Html.DisplayFor(modelItem => item.Состояние)</td>
+                } else if (item.Состояние.ToLower() == "просрочен") {
+                    <td style="color: red; font-weight: bold">@Html.DisplayFor(modelItem => item.Состояние)</td>
+                } else {
+                    <td style="color: black">@Html.DisplayFor(modelItem => item.Состояние)</td>
+                }
+                <td>
+                    <a href="@Url.Action("Edit", new {id = item.АрендаID})">
+                        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+                    </a><br />
+                    <a href="@Url.Action("Details", new {id = item.АрендаID})">
+                        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;Подробно
+                    </a><br />
+                    <a href="@Url.Action("Delete", new {id = item.АрендаID})">
+                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <div>
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+    </div>
+}
+
+@section Scripts {
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/chosen.jquery.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            if ($('#failedrentsquantity').val() == 0) {
+                $('#gotofailedrents').prop('disabled', true);
+            }
+
+            $('#gotofailedrents').click(function () {
+                $('#failedrentssearchfield').css("color", "white");
+                $('#failedrentssearchfield').val("просрочен");
+            });
+        });
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

@@ -1,0 +1,206 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.myIncrease {
+    transition: 0.3s;
+    display: block;
+}
+
+a.myIncrease {
+    text-decoration: none;
+    color: white;
+}
+
+a.myLinkButtonColorWhite {
+    color: black;
+}
+
+a.myLinkButtonColorPink {
+    color: black;
+}
+
+.myIncrease:hover {
+    transform: scale(1.1);
+}
+
+.myLeft {
+    margin-left: 200px;
+}
+
+
+.myLinkButton::before {
+    position: absolute;
+    content: '';
+    height: 12px;
+    left: 6px;
+    right: 6px;
+    top: 2px;
+    border-radius: 10px;
+}
+
+.myButOne {
+    left: -100px;
+}
+
+.myButTwo {
+    left: 100px;
+}
+
+.myPerOne {
+    left: -100px;
+}
+
+.myPerTwo {
+    left: 100px;
+}
+
+.myLinkButton {
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    font-size: 11pt;
+    border-radius: 30px;
+    box-shadow: 0 3px 3px #555;
+    width: 160px;
+}
+
+.myLinkButtonColorGreen {
+    background: radial-gradient(at 50% 120%, #00f400 30%, #006000);
+}
+
+    .myLinkButtonColorGreen::before {
+        background: #3dd53D;
+    }
+
+.myLinkButtonColorWhite {
+    background: radial-gradient(at 50% 120%, #fff 30%, #bbb);
+}
+
+    .myLinkButtonColorWhite::before {
+        background: #eee;
+    }
+
+.myLinkButtonColorPink {
+    background: radial-gradient(at 50% 120%, #FFE5F0 30%, #FF91C2)
+}
+
+    .myLinkButtonColorPink::before {
+        background: #FFE5F0;
+    }
+
+.myIntoLink {
+    position: relative;
+    margin-left: 20px;
+}
+
+.myFindInput {
+    float: left;
+    margin-right: 20px
+}
+
+.myWrapGreen {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 20px 10px 35px 300px;
+    background: ghostwhite;
+}
+/*=================== tooltip =======================*/
+.person {
+    font-size: 24pt;
+    position: relative;
+    display: inline-block;
+}
+
+.mytooltip {
+    position: absolute;
+    opacity: 0;
+    font-size: 16px;
+    background: #eee;
+    z-index: 9999;
+    width: 280px;
+    bottom: -190%;
+    left: 50%;
+    padding: 25px;
+    margin: 0 0 105px -140px;
+    text-align: left;
+    border-radius: 10px/50%;
+    color: #dd5864;
+    cursor: default;
+    transition: opacity .3s, transform .3s;
+    pointer-events: none;
+    transform: translate3d(0,-90px,0) rotate3d(1,1,1,-6deg);
+}
+
+.person:hover .mytooltip {
+    opacity: 1;
+    transform: translate3d(0,-20px,0);
+}
+/*=========================================================*/
+
+div.myFormTitle {
+    font-size: 12pt;
+    color: #fff;
+    width: 155px;
+    height: 27px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 20px;
+    text-shadow: 1px -1px #555;
+    position: absolute;
+    top: -12px;
+    left: 70px;
+    width: 155px;
+    list-style-type: none;
+    background: aqua;
+    background: linear-gradient(to top, #0272a1, #46bbf7);
+}
+
+.myTableTh {
+    background: #4773B2;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+}
+    .myTableTh td:hover {
+        background-color: #4773B2;
+    }
+
+.myMenuActive {
+    /*background: #676767;*/
+    background: whitesmoke;
+}
+
+.myMenuLi {
+    border-radius: 5px;
+}
+
+.myReportTr {
+    background: #eee;
+}
+
+.myReportTr:hover {
+    background: #ddd;
+}

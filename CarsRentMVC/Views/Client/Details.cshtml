@@ -1,0 +1,88 @@
+﻿@model CarsRentEF.Models.Client
+
+@{
+    ViewBag.Title = "Client Details";
+}
+
+<div class="well well-sm"><h1>Данные клиента</h1></div>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ФИО)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ФИО)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Адрес)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Адрес)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Телефон)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Телефон)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.НомерПаспорта)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.НомерПаспорта)
+        </dd>
+
+        <dt>
+            № Водительского уд.
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.НомерВодУд)
+        </dd>
+
+        <dt>Черный список</dt>
+
+        @if (Model.ЧерныйСписок.ToLower() == "да") {
+            <dd style="color: red; font-weight: bold">@Html.DisplayFor(modelItem => Model.ЧерныйСписок)</dd>
+        } else {
+            <dd style="color: green">@Html.DisplayFor(modelItem => Model.ЧерныйСписок)</dd>
+        }
+    </dl>
+    @if (Model.Image == null) {
+        <p></p>
+    } else {
+        <img width="200" src="@Url.Action("GetImage", "Client", new {Model.КлиентID})" class="img-thumbnail" />
+    }
+    <br /><br /><br /><br />
+</div>
+<p>
+    <a href="@Url.Action("Edit", new {id = Model.КлиентID})" class="btn btn-warning">
+        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Delete", new {id = Model.КлиентID})" class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Index", new {id = Model.КлиентID})" class="btn btn-default">
+        <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+    </a>
+</p>
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

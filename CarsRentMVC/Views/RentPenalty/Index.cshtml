@@ -1,0 +1,99 @@
+﻿@using CarsRentMVC.Infrastructure
+@model CarsRentMVC.Models.ViewModels.RentListViewModel
+
+@{
+    ViewBag.Title = "Rent Penalty Index";
+}
+
+<div class="well well-sm"><h1>Договора Аренды</h1></div>
+
+@using (Html.BeginForm("Index", "RentPenalty")) {
+    <br />
+    <input id="failedrentssearchfield" class="form-control myFindInput" type="text" name="filter" placeholder="Поиск..." value="" />
+    <span>
+        <button class="btn btn-primary" type="submit">Найти</button>
+    </span>
+    <br />
+    <br />
+    <br />
+
+    <table class="table table-responsive table-hover table-bordered table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Госномер<br />авто</th>
+            <th>Авто</th>
+            <th>ФИО</th>
+            <th>Номер<br />Паспорта</th>
+            <th>Адрес,<br />Телефон</th>
+            <th>Дата<br />Выдачи</th>
+            <th>Дата<br />Возврата</th>
+            <th>Сумма</th>
+            <th>Состояние</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Rents) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.АрендаID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Car.Госномер)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Car.Марка)<br />
+                    @Html.DisplayFor(modelItem => item.Car.Модель)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.ФИО)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.НомерПаспорта)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.Адрес)<br />тел.
+                    @Html.DisplayFor(modelItem => item.Client.Телефон)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ДатаВыдачи)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ДатаВозврата)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ИтоговаяСумма)&nbsp;<span>$</span>
+                </td>
+
+                @if (item.Состояние.ToLower() == "закрыт") {
+                    <td style="color: green">@Html.DisplayFor(modelItem => item.Состояние)</td>
+                } else if (item.Состояние.ToLower() == "просрочен") {
+                    <td style="color: red; font-weight: bold">@Html.DisplayFor(modelItem => item.Состояние)</td>
+                } else {
+                    <td style="color: black">@Html.DisplayFor(modelItem => item.Состояние)</td>
+                }
+                <td>
+                    <a href="@Url.Action("AddPenalty", new {id = item.АрендаID})">
+                        <span class="glyphicon glyphicon-edit"></span>&nbsp;Добавить штраф
+                    </a><br/>
+                    <a href="@Url.Action("Details", new {id = item.АрендаID})">
+                        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;Подробно
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <div>
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+    </div>
+}
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CarsRentMVC.Controllers.AccountController">
+    <Position X="7.5" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Class Name="CarsRentMVC.Controllers.AccountController.ChallengeResult" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\AccountController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAABAChACAAAAAAAAFgEgAABAABMKIAAAMRAAQgAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.AdminController" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdminController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.CarController">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAAAAAAAAQAAQAAEAAEACAAEAAAQAAAA=</HashCode>
+      <FileName>Controllers\CarController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.ClientController" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACABAAAAAAAAQAAQAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ClientController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.DiscountController" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\DiscountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.HomeController" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.ManageController" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="CarsRentMVC.Controllers.ManageController.ManageMessageId" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\ManageController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAABACAQiAAgAAAAEFhAAAAAAEAIMIAAEEEgAAkAAA=</HashCode>
+      <FileName>Controllers\ManageController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.MenuController" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABABAAAAAA=</HashCode>
+      <FileName>Controllers\MenuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.OptionController" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\OptionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.PenaltyController" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACABAACAAAAAAAAAQAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\PenaltyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.RentController">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBAAACABCACAAAAAQQAAAAEAgEACAAEAAAABAAI=</HashCode>
+      <FileName>Controllers\RentController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.RentPenaltyController">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAACABAAAAAAAAQQAAAAAAAAAAAAEAAAAQAAA=</HashCode>
+      <FileName>Controllers\RentPenaltyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Controllers.ReportController">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACABAACAAAAAAAAAAAEAAEACAAUAAAAAAAA=</HashCode>
+      <FileName>Controllers\ReportController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Infrastructure.PagingHelpers">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\PagingHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Models.ViewModels.ReportListViewModel">
+    <Position X="0.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ViewModels\ReportListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarsRentMVC.Models.ViewModels.PagingInfo">
+    <Position X="4" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\ViewModels\PagingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9.75" />
+</ClassDiagram>

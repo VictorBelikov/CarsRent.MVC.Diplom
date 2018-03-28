@@ -1,0 +1,113 @@
+﻿@using CarsRentEF.Models
+@model CarsRentMVC.Models.ViewModels.ReportDetailsViewModel
+
+@{
+    ViewBag.Title = "Report Details";
+}
+
+<div class="well well-sm"><h1>Данные статистического отчета</h1></div>
+<br />
+<br />
+<table class="table table-responsive table-hover table-bordered">
+    <tr class="myTableTh">
+        <td colspan="3">Общая доходность:</td>
+    </tr>
+    <tr class="myReportTr">
+        <td>Период</td>
+        <td>Количество дней</td>
+        <td>Доход ($)</td>
+    </tr>
+    <tr>
+        <td>
+            с <b>@Model.Report.StartDate.ToShortDateString()</b> по <b>@Model.Report.EndDate.ToShortDateString()</b>
+        </td>
+        <td>
+            <b style="color: green">@Model.Days</b>
+        </td>
+        <td>
+            <b style="color: orange">@Model.FullProfit</b>
+        </td>
+    </tr>
+    <tr class="myTableTh">
+        <td colspan="3">По каждому автомобилю:</td>
+    </tr>
+    <tr class="myReportTr">
+        <td>Автомобиль</td>
+        <td>Срок аренды (дней)</td>
+        <td>Доход ($)</td>
+    </tr>
+    @{
+        List<int> carNums = new List<int>();
+        foreach (Rent i in Model.Rents) {
+            if (carNums.Contains(i.Car.АвтоID)) {
+                continue;
+            }
+            <tr>
+                <td>
+                    <b>@i.Car.Госномер @i.Car.Марка @i.Car.Модель @i.Car.ГодВыпуска г.в. @i.Car.ОбъемДвигателя л.(@i.Car.ТипДвигателя) @i.Car.Мощность л.с.</b>
+                </td>
+                <td><b style="color: green">@i.Car.PeriodDays</b></td>
+                <td><b style="color: orange">@Math.Round(i.Car.PeriodProfit, 2)</b></td>
+            </tr>
+            carNums.Add(i.Car.АвтоID);
+        }
+
+        foreach (Car i in Model.Cars) {
+            if (carNums.Contains(i.АвтоID)) {
+                continue;
+            }
+            <tr>
+                <td>
+                    <b>@i.Госномер @i.Марка @i.Модель @i.ГодВыпуска г.в. @i.ОбъемДвигателя л.(@i.ТипДвигателя) @i.Мощность л.с.</b>
+                </td>
+                <td><b style="color: green">@i.PeriodDays</b></td>
+                <td><b style="color: orange">@Math.Round(i.PeriodProfit, 2)</b></td>
+            </tr>
+        }
+    }
+    <tr class="myTableTh">
+        <td colspan="3">По каждой единице дополнительного оборудования:</td>
+    </tr>
+    <tr class="myReportTr">
+        <td>Дополнительное оборудование</td>
+        <td>Срок аренды (дней)</td>
+        <td>Доход ($)</td>
+    </tr>
+    @{
+        foreach (Option i in Model.Options) {
+            <tr>
+                <td>
+                    <b>"@i.Name"</b>
+                </td>
+                <td><b style="color: green">@i.PeriodDays</b></td>
+                <td><b style="color: orange">@Math.Round(i.PeriodProfit, 2)</b></td>
+            </tr>
+        }
+    }
+</table>
+<br />
+<br />
+<p>
+    <a href="@Url.Action("Edit", new {id = Model.Report.ReportId})" class="btn btn-warning">
+        <span class="glyphicon glyphicon-edit"></span>&nbsp;Редактировать
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Delete", new {id = Model.Report.ReportId})" class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+    </a>
+    &nbsp;&nbsp;
+    <a href="@Url.Action("Index", new {id = Model.Report.ReportId})" class="btn btn-default">
+        <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+    </a>
+</p>
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(function () { $("#successmessage").hide('slow'); }, 2000);
+        });
+
+    </script>
+}

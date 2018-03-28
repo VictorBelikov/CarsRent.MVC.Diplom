@@ -1,0 +1,199 @@
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ApplicationInsights.config
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\CarsRentMVC.dll.config
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\CarsRentMVC.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\CarsRentMVC.pdb
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Antlr3.Runtime.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\EntityFramework.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.Web.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.ApplicationInsights.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Newtonsoft.Json.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Owin.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.Helpers.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.Mvc.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.Optimization.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.Razor.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\WebGrease.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.Helpers.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.Mvc.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.Optimization.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.Razor.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Antlr3.Runtime.pdb
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Newtonsoft.Json.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\EntityFramework.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.ApplicationInsights.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.Web.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.Razor.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\EntityFramework.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.csprojResolveAssemblyReference.cache
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.csproj.CoreCompileInputs.cache
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.pdb
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\CarsRentEF.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\CarsRentEF.pdb
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\CarsRentEF.dll.config
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.Migrations.InitialCreate.resources
+C:\Users\v1cto\Documents\Visual Studio 2015\Projects\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.csproj.GenerateResource.Cache
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ApplicationInsights.config
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\CarsRentMVC.dll.config
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\CarsRentMVC.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\CarsRentMVC.pdb
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Antlr3.Runtime.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\CarsRentEF.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\EntityFramework.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.Web.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.ApplicationInsights.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Newtonsoft.Json.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Owin.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.Helpers.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.Mvc.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.Optimization.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.Razor.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\WebGrease.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\CarsRentEF.pdb
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\CarsRentEF.dll.config
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Antlr3.Runtime.pdb
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.Web.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.ApplicationInsights.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Newtonsoft.Json.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.Helpers.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.Mvc.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.Optimization.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.Razor.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\EntityFramework.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.Razor.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\EntityFramework.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.csprojResolveAssemblyReference.cache
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.csproj.CoreCompileInputs.cache
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.dll
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.pdb
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.Migrations.InitialCreate.resources
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.csproj.GenerateResource.Cache
+C:\Users\v1cto\Desktop\CarsRentMVC\CarsRentMVC\obj\Debug\CarsRentMVC.Migrations.Name.resources

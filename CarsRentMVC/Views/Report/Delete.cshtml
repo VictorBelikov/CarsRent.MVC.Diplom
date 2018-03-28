@@ -1,0 +1,72 @@
+﻿@model CarsRentEF.Models.Report
+
+@{
+    ViewBag.Title = "Report Delete";
+}
+
+<div class="well well-sm"><h1>Удалить статистический отчет</h1></div>
+<h3>Вы уверены, что хотите удалить?</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportId)
+        </dd>
+
+        <dt>
+            Наименование
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortName)
+        </dd>
+
+        <dt>
+            Дата формирования
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfFormation)
+        </dd>
+
+        <dt>
+            Начало периода
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            Конец периода
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(x => x.ReportId)
+        @Html.HiddenFor(x => x.Timestamp)
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+            </button>
+            &nbsp;&nbsp;
+            <a href="@Url.Action("Index")" class="btn btn-default">
+                <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+            </a>
+        </div>
+    }
+</div>

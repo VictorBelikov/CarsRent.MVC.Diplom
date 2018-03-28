@@ -1,0 +1,30 @@
+﻿@model CarsRentEF.Models.Car
+
+
+<div class="form-group">
+    <label class="control-label col-md-2" for="">Марка авто</label>
+    <div class="col-md-10">
+        <input disabled="" class="form-control" type="text" name="carbrand" value="@Model.Марка" />
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label col-md-2" for="">Модель авто</label>
+    <div class="col-md-10">
+        <input disabled="" class="form-control" type="text" name="carmodel" value="@Model.Модель" />
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label col-md-2" for="">Год вып. авто</label>
+    <div class="col-md-10">
+        <input disabled="" class="form-control" type="text" name="caryear" value="@Model.ГодВыпуска" />
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label col-md-2" for="">Стоимость авто в сут. ($)</label>
+    <div class="col-md-10">
+        <input id="carcostperday" disabled="" class="form-control" type="text" name="caryear" value="@Model.СтоимостПрокатаВСут" />
+    </div>
+</div>

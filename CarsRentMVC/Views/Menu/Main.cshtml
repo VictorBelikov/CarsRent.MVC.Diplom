@@ -1,0 +1,17 @@
+﻿@model System.Collections.Generic.List<CarsRentMVC.Models.MenuItem>
+
+@foreach (var i in Model) {
+    if (i.Name == "Домой" || i.Name == "Аренды" || i.Name == "Клиенты" || i.Name == "Статистические отчеты" || i.Name == "Штрафы аренды") {
+        if (i.Name.ToLower() == "домой") {
+            <li class="@i.Active myMenuLi">
+                <a href="@Url.Action("Index", "Home")">
+                    <img width="23" height="20" src="~/Content/Images/home.png" alt="" />
+                </a>
+            </li>
+        } else {
+            <li class="@i.Active myMenuLi">@Html.ActionLink(i.Name, i.Action, i.Controller)</li>
+        }
+    } else {
+        continue;
+    }
+}

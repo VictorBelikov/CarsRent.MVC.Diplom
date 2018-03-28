@@ -1,0 +1,11 @@
+﻿@model CarsRentEF.Models.Rent
+
+<div class="form-group">
+    @foreach (var i in Model.OptionsForRent) {
+        if (Model.ДопОборудование.ToLower().Contains(i.Name.ToLower())) {
+            <label>@Html.CheckBox("options", true, new { @value = i.RentDayCost }) @i.Name (@i.RentDayCost $)</label><br>
+        } else {
+            <label>@Html.CheckBox("options", false, new { @value = i.RentDayCost }) @i.Name (@i.RentDayCost $)</label><br>
+        }
+    }
+</div>

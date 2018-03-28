@@ -1,0 +1,248 @@
+﻿@model CarsRentEF.Models.Rent
+
+@{
+    ViewBag.Title = "Rent Penalty Details";
+}
+
+<div class="well well-sm"><h1>Добавить штраф к договору аренды</h1></div>
+
+@using (Html.BeginForm("Save", "RentPenalty", new { id = Model.АрендаID }, FormMethod.Post)) {
+
+    <input type="hidden" name="startedpenalties" id="startedpenalties" value="@ViewBag.StartedPenalties" />
+    <input type="hidden" name="prevsumofpen" id="prevsumofpen" value="@ViewBag.PreviousSumOfPenalties" />
+    <input type="hidden" name="fullrentsum" id="fullrentsum" value="@ViewBag.FullRentSum" />
+    <br/>
+    <div class="col-xs-4" style="margin-bottom: 30px;">
+        <div style="background: ghostwhite; border: 1px solid gainsboro; border-radius: 5px; display: inline-block; padding: 30px 40px 10px">
+            <div class="myFormTitle">Штрафы</div>
+            <div class="form-group">
+                @if (Model.Штрафы != null) {
+                    foreach (var i in Model.PenaltyForRent) {
+                        if (Model.Штрафы.ToLower().Contains(i.НаименованиеШтрафа.ToLower())) {
+                            <label>@Html.CheckBox("penalties", true, new { @value = i.СуммаШтрафа + i.НаименованиеШтрафа }) @i.НаименованиеШтрафа (@i.СуммаШтрафа $)</label><br>
+                        } else {
+                            <label>@Html.CheckBox("penalties", false, new { @value = i.СуммаШтрафа + i.НаименованиеШтрафа }) @i.НаименованиеШтрафа (@i.СуммаШтрафа $)</label><br>
+                        }
+                    }
+                } else {
+                    foreach (var i in Model.PenaltyForRent) {
+                        <label>@Html.CheckBox("penalties", false, new { @value = i.СуммаШтрафа + i.НаименованиеШтрафа }) @i.НаименованиеШтрафа (@i.СуммаШтрафа $)</label><br>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    
+    <table class="table table-responsive table-hover table-bordered table-striped">
+        <tr>
+            <th>Данные клиента</th>
+            <th>Данные арендованного автомобиля</th>
+            <th>Данные договора аренды</th>
+        </tr>
+        <tr>
+            <td>
+                <dl>
+                    <dt>
+                        ID:
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Client.КлиентID)
+                    </dd>
+                    <dt>
+                        ФИО:
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Client.ФИО)
+                    </dd>
+
+                    <dt>Адрес:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Client.Адрес);
+                    </dd>
+                    <dt>Телефон:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Client.Телефон)
+                    </dd>
+                    <dt>№ Паспорта:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Client.НомерПаспорта)
+                    </dd>
+                    <dt>№ Водительского уд.:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Client.НомерВодУд)
+                    </dd>
+                    <dt>Черный список</dt>
+
+                    @if (Model.Client.ЧерныйСписок.ToLower() == "да") {
+                        <dd style="color: red; font-weight: bold">@Html.DisplayFor(modelItem => Model.Client.ЧерныйСписок)</dd>
+                    } else {
+                        <dd style="color: green">@Html.DisplayFor(modelItem => Model.Client.ЧерныйСписок)</dd>
+                    }
+
+                    <dt>Фото:</dt>
+                    @if (Model.Client.Image == null) {
+                        <p></p>
+                    } else {
+                        <img width="120" src="@Url.Action("GetImage", "Client", new {Model.КлиентID})" class="img-thumbnail" />
+                    }
+                </dl>
+            </td>
+            <td>
+                <dl>
+                    <dt>ID:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.АвтоID)
+                    </dd>
+                    <dt>Марка, модель:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.Марка),
+                        @Html.DisplayFor(model => model.Car.Модель)
+                    </dd>
+                    <dt>Тип кузова, Цвет:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.ТипКузова),
+                        @Html.DisplayFor(model => model.Car.Цвет)
+
+                    </dd>
+                    <dt>Двигатель:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.ТипДвигателя),
+                        @Html.DisplayFor(model => model.Car.ОбъемДвигателя) л. ,
+                        @Html.DisplayFor(model => model.Car.Мощность) л.с.
+                    </dd>
+                    <dt>Год выпуска:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.ГодВыпуска) г.
+                    </dd>
+                    <dt>Госномер:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.Госномер)
+                    </dd>
+                    <dt>VIN номер:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.VIN)
+                    </dd>
+                    <dt>Полная стоимость:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.Стоимость) $
+                    </dd>
+                    <dt>Стоимость аренды в сут.:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Car.СтоимостПрокатаВСут) $
+                    </dd>
+                </dl>
+            </td>
+            <td>
+                <dl>
+                    <dt>ID:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.АрендаID)
+                    </dd>
+                    <dt>Дата выдачи:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.ДатаВыдачи)
+                    </dd>
+                    <dt>Дата возврата:</dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.ДатаВозврата)
+                    </dd>
+                    <dt>Стоимость доп. оборудования в сут.</dt>
+                    <dd>
+                        @Model.ДопОборудование<br />
+                    </dd>
+                    <dt>
+                        Скидки:
+                    </dt>
+
+                    <dd>
+                        @Model.Скидки<br />
+                    </dd>
+
+                    <dt>
+                        Штрафы:
+                    </dt>
+
+                    <dd style="color: red">
+                        @Model.Штрафы<br />
+                    </dd>
+
+                    <dt>
+                        Итоговая стоимость:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ИтоговаяСумма)<span> $</span>
+                    </dd>
+
+                    <dt>
+                        Статус:
+                    </dt>
+                    @if (Model.Состояние.ToLower() == "закрыт") {
+                        <dd style="color: green">@Html.DisplayFor(model => Model.Состояние)</dd>
+                    } else if (Model.Состояние.ToLower() == "просрочен") {
+                        <dd style="color: red; font-weight: bold">@Html.DisplayFor(model => Model.Состояние)</dd>
+                    } else {
+                        <dd style="color: black">@Html.DisplayFor(model => Model.Состояние)</dd>
+                    }
+
+                    <dt>
+                        Фото:
+                    </dt>
+
+                    @if (Model.Car.Image == null) {
+                        <p></p>
+                    } else {
+                        <img width="200" src="@Url.Action("GetImage", "Car", new {Model.АвтоID})" class="img-thumbnail" />
+                    }
+                </dl>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        <button type="submit" class="btn btn-success">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp;Сохранить
+        </button>
+        &nbsp;&nbsp;
+        <a href="@Url.Action("Index", new {id = Model.АрендаID})" class="btn btn-default">
+            <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+        </a>
+    </p>
+}
+
+<div class="form-group" style="border: 1px solid gainsboro; background: ghostwhite; padding: 30px; display: inline-block; border-radius: 5px; width: 380px; position: absolute; left: 920px; top: 180px">
+    <input id="fullrentpenaltyresult" type="text" disabled="" class="form-control" style="display: inline; width: 200px" />&nbsp;&nbsp;&nbsp;&nbsp;<button id="calculate" class="btn btn-primary">Рассчитать</button>
+</div>
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/chosen.jquery.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#calculate').click(function () {
+
+                var result1 = $('input[name="penalties"]:checked');
+                var fullPenaltiesCost = 0;
+
+                if (result1.length > 0) {
+                    result1.each(function () {
+                        var num = parseInt($(this).val());
+                        fullPenaltiesCost += +num;
+                    });
+                }
+
+                var res3 = $('#fullrentsum').val().replace(",", ".");
+                var res1 = fullPenaltiesCost - +$('#prevsumofpen').val();
+                var res2 = +res3 + res1;
+
+                $('#fullrentpenaltyresult').val(res2 + ' $');
+            });
+        });
+
+    </script>
+
+}

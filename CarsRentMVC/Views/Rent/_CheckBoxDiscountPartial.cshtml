@@ -1,0 +1,12 @@
+﻿@model CarsRentEF.Models.Rent
+
+
+<div class="form-group">
+    @foreach (var i in Model.DiscountsForRent) {
+        if (Model.Скидки.ToLower().Contains(i.НаименованиеСкидки.ToLower())) {
+            <label>@Html.CheckBox("discounts", true, new { @value = i.Процент }) @i.НаименованиеСкидки (@i.Процент %)</label><br>
+        } else {
+            <label>@Html.CheckBox("discounts", false, new { @value = i.Процент }) @i.НаименованиеСкидки (@i.Процент %)</label><br>
+        }
+    }
+</div>

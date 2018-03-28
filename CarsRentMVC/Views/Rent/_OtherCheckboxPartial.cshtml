@@ -1,0 +1,44 @@
+﻿@model CarsRentEF.Models.Rent
+
+<div class="col-xs-4">
+    <div style="background: ghostwhite; border: 1px solid gainsboro; border-radius: 5px; display: inline-block; padding: 30px 40px 10px">
+        <div class="myFormTitle">Скидки</div>
+        <div class="form-group">
+            @if (Model.Скидки != null) {
+                foreach (var i in Model.DiscountsForRent) {
+                    if (Model.Скидки.ToLower().Contains(i.НаименованиеСкидки.ToLower())) {
+                        <label>@Html.CheckBox("discounts", true, new { @value = i.Процент}) @i.НаименованиеСкидки (@i.Процент %)</label><br>
+                    } else {
+                        <label>@Html.CheckBox("discounts", false, new { @value = i.Процент}) @i.НаименованиеСкидки (@i.Процент %)</label><br>
+                    }
+                }
+            } else {
+                foreach (var i in Model.DiscountsForRent) {
+                    <label>@Html.CheckBox("discounts", false, new { @value = i.Процент}) @i.НаименованиеСкидки (@i.Процент %)</label><br>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-4">
+    <div style="background: ghostwhite; border: 1px solid gainsboro; border-radius: 5px; display: inline-block; padding: 30px 40px 10px">
+        <div class="myFormTitle">Опции</div>
+        <div class="form-group">
+            @if (Model.ДопОборудование != null) {
+                foreach (var i in Model.OptionsForRent) {
+                    if (Model.ДопОборудование.ToLower().Contains(i.Name.ToLower())) {
+                        <label>@Html.CheckBox("options", true, new { @value = i.RentDayCost }) @i.Name (@i.RentDayCost $)</label><br>
+                    } else {
+                        <label>@Html.CheckBox("options", false, new { @value = i.RentDayCost }) @i.Name (@i.RentDayCost $)</label><br>
+                    }
+                }
+            } else {
+                foreach (var i in Model.OptionsForRent) {
+                    <label>@Html.CheckBox("options", false, new { @value = i.RentDayCost }) @i.Name (@i.RentDayCost $)</label><br>
+                }
+            }
+        </div>
+    </div>
+</div>
+

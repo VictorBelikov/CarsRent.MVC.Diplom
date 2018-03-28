@@ -1,0 +1,131 @@
+﻿@using System.Threading
+@model CarsRentEF.Models.Car
+
+@{
+    ViewBag.Title = "Car Delete";
+}
+
+<div class="well well-sm"><h1>Удалить автомобиль</h1></div>
+<h3>Вы уверены, что хотите удалить?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            ID Авто
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.АвтоID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Госномер)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Госномер)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Марка)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Марка)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Модель)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Модель)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ГодВыпуска)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ГодВыпуска)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ТипКузова)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ТипКузова)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Цвет)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Цвет)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Стоимость)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Стоимость)<span> $</span>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.СтоимостПрокатаВСут)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.СтоимостПрокатаВСут)<span> $</span>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Статус)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Статус)
+        </dd>
+
+        <dt>
+            Фото
+        </dt>
+
+        @if (Model.Image != null) {
+            <dd>
+                <img width="300" src="@Url.Action("GetImage","Car", new {Model.АвтоID})" alt="NoImage" class="img-thumbnail" />
+            </dd>
+        } else {
+            <dd></dd>
+        }
+
+    </dl>
+    <br/>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+
+        @Html.HiddenFor(x => x.АвтоID)
+        @Html.HiddenFor(x => x.Timestamp)
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+            </button>
+            &nbsp;&nbsp;
+            <a href="@Url.Action("Index")" class="btn btn-default">
+                <span class="glyphicon glyphicon-list"></span>&nbsp;К списку
+            </a>
+        </div>
+    }
+</div>
